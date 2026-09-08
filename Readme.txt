@@ -1,4 +1,4 @@
-Thanks for downloading this template!
+Thanks, Brenda, for downloading this template!
 
 Template Name: Impact
 Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
