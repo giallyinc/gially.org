@@ -17,17 +17,32 @@
       background-color: #ffffff !important;
     }
     
-    /* Heading matches the exact green color and style */
+    /* Heading style with yellow underline */
     #hero h2 {
       color: #0f766e !important;
       font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    #hero h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background-color: #ffbb00 !important;
     }
     
-    /* Paragraph matches the dark charcoal color and typography */
+    /* Paragraph styling */
     #hero p {
       color: #334155 !important;
-      font-size: 1.05rem;
-      line-height: 1.7;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
     }
 
     /* Header, topbar, and footer unified in green */
@@ -35,7 +50,7 @@
       background-color: #0f766e !important;
     }
 
-    /* Learn More button styled to match the home page Get Started button */
+    /* Learn More button */
     #hero .btn-get-started {
       background-color: #0f766e !important;
       border-color: #0f766e !important;
@@ -43,7 +58,7 @@
       padding: 10px 30px;
       border-radius: 4px;
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
       text-decoration: none;
     }
 
@@ -87,16 +102,13 @@
   <!-- ======= Hero Section Layout ======= -->
   <section id="hero" class="hero">
     <div class="container position-relative">
-      <div class="row gy-5">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center text-lg-start">
           <h2>About Us</h2>
           <p>Primarily organized and operated to conduct applied research to gain knowledge or understanding to determine the means by which a specific, recognized need may be met. Applied research includes investigations oriented to discovering new scientific knowledge that has specific commercial objectives with respect to products, processes, or services.</p>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="https://www.irs.gov/pub/irs-tege/eotopico86.pdf" target="_blank" class="btn-get-started">Learn More</a>
           </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <img src="assets/img/GiAlly标.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
