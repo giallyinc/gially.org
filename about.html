@@ -12,13 +12,25 @@
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
-    /* Body and hero section background set to white with extra padding for white space */
-    body, #hero {
+    /* Ensure html and body take up full height to prevent any bottom white gaps */
+    html, body {
+      height: 100%;
+      margin: 0;
       background-color: #ffffff !important;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #main {
+      flex: 1;
+    }
+
     #hero {
-      padding: 100px 0 140px 0 !important;
+      background-color: #ffffff !important;
+      padding: 60px 0 80px 0 !important;
     }
     
     /* Heading style with orange underline matching the logo header */
@@ -49,13 +61,14 @@
       max-width: 800px;
     }
 
-    /* Header, topbar, and footer unified in green, matching home footer size and layout */
+    /* Header, topbar, and footer unified in green */
     #header, #topbar, #footer {
       background-color: #0f766e !important;
     }
 
     #footer {
       padding: 60px 0 30px 0 !important;
+      margin-top: auto;
     }
 
     /* Learn More button */
@@ -107,20 +120,23 @@
     </div>
   </header>
 
-  <!-- ======= Hero Section Layout ======= -->
-  <section id="hero" class="hero">
-    <div class="container position-relative">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 text-center text-lg-start">
-          <h2>About Us</h2>
-          <p>Primarily organized and operated to conduct applied research to gain knowledge or understanding to determine the means by which a specific, recognized need may be met. Applied research includes investigations oriented to discovering new scientific knowledge that has specific commercial objectives with respect to products, processes, or services.</p>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="https://www.irs.gov/pub/irs-tege/eotopico86.pdf" target="_blank" class="btn-get-started">Learn More</a>
+  <!-- ======= Main Content Area ======= -->
+  <main id="main">
+    <!-- ======= Hero Section Layout ======= -->
+    <section id="hero" class="hero">
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center text-lg-start">
+            <h2>About Us</h2>
+            <p>Primarily organized and operated to conduct applied research to gain knowledge or understanding to determine the means by which a specific, recognized need may be met. Applied research includes investigations oriented to discovering new scientific knowledge that has specific commercial objectives with respect to products, processes, or services.</p>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <a href="https://www.irs.gov/pub/irs-tege/eotopico86.pdf" target="_blank" class="btn-get-started">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
