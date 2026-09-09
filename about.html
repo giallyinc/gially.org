@@ -5,13 +5,56 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>About Us - GIALLY INC.</title>
   <link href="assets/img/GiAlly标.png" rel="icon">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    /* Body and main sections set to white */
+    body, #main, .breadcrumbs, .about {
+      background-color: #ffffff !important;
+    }
+    
+    /* Title heading in the specified green color */
+    .breadcrumbs h2, .about h2 {
+      color: #0f766e !important;
+    }
+    
+    .about p {
+      color: #334155 !important;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    /* Header, topbar, and footer unified in green */
+    #header, #topbar, #footer {
+      background-color: #0f766e !important;
+    }
+
+    /* Learn More button matching the green color */
+    .btn-get-started {
+      background-color: #0f766e !important;
+      border-color: #0f766e !important;
+      color: #ffffff !important;
+      padding: 10px 30px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .btn-get-started:hover {
+      background-color: #115e59 !important;
+      border-color: #115e59 !important;
+      color: #ffffff !important;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ======= Top Bar ======= -->
   <section id="topbar" class="topbar d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -20,6 +63,8 @@
       </div>
     </div>
   </section>
+
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center"><h1>GiAlly</h1></a>
@@ -37,31 +82,31 @@
     </div>
   </header>
 
+  <!-- ======= Main Content ======= -->
   <main id="main">
-    <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="background-image: url('');">
-        <div class="container position-relative">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2>About Us</h2>
-              <p>Primarily organized and operated to conduct applied research to gain knowledge or understanding to determine the means by which a specific, recognized need may be met. Applied research includes investigations oriented to discovering new scientific knowledge that has specific commercial objectives with respect to products, processes, or services.</p>
-            </div>
+    <div class="breadcrumbs py-5">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2>About Us</h2>
           </div>
         </div>
       </div>
     </div>
-    <section id="about" class="about">
+    
+    <section id="about" class="about pb-5">
       <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
-          <div class="col-lg-12">
-            <p>Our organization is dedicated to serving the public interest through rigorous scientific exploration, educational programs, and charitable community initiatives.</p>
-            <a href="https://www.irs.gov/pub/irs-tege/eotopico86.pdf" target="_blank" class="btn-get-started"><span>Learn More</span></a>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p>Primarily organized and operated to conduct applied research to gain knowledge or understanding to determine the means by which a specific, recognized need may be met. Applied research includes investigations oriented to discovering new scientific knowledge that has specific commercial objectives with respect to products, processes, or services.</p>
+            <a href="https://www.irs.gov/pub/irs-tege/eotopico86.pdf" target="_blank" class="btn-get-started">Learn More</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="container">
       <div class="row gy-4">
