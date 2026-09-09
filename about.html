@@ -12,40 +12,41 @@
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
-    /* Body and main sections set to white */
-    body, #main, .breadcrumbs, .about {
+    /* Body and hero section background set to white */
+    body, #hero {
       background-color: #ffffff !important;
     }
     
-    /* Title heading in the specified green color */
-    .breadcrumbs h2, .about h2 {
+    /* Heading matches the exact green color and font sizing of the home page */
+    #hero h2 {
       color: #0f766e !important;
+      font-weight: 700;
     }
     
-    .about p {
+    #hero p {
       color: #334155 !important;
-      line-height: 1.8;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
-    /* Header, topbar, and footer unified in green */
+    /* Header, topbar, and footer unified in the exact same green color */
     #header, #topbar, #footer {
       background-color: #0f766e !important;
     }
 
-    /* Learn More button matching the green color */
-    .btn-get-started {
+    /* Learn More button styled to match the home page Get Started button */
+    #hero .btn-get-started {
       background-color: #0f766e !important;
       border-color: #0f766e !important;
       color: #ffffff !important;
       padding: 10px 30px;
       border-radius: 4px;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 15px;
       text-decoration: none;
     }
 
-    .btn-get-started:hover {
+    #hero .btn-get-started:hover {
       background-color: #115e59 !important;
       border-color: #115e59 !important;
       color: #ffffff !important;
@@ -82,29 +83,23 @@
     </div>
   </header>
 
-  <!-- ======= Main Content ======= -->
-  <main id="main">
-    <div class="breadcrumbs py-5">
-      <div class="container position-relative">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h2>About Us</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <section id="about" class="about pb-5">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <p>Primarily organized and operated to conduct applied research to gain knowledge or understanding to determine the means by which a specific, recognized need may be met. Applied research includes investigations oriented to discovering new scientific knowledge that has specific commercial objectives with respect to products, processes, or services.</p>
+  <!-- ======= Hero Section Layout ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>About Us</h2>
+          <p>Primarily organized and operated to conduct applied research to gain knowledge or understanding to determine the means by which a specific, recognized need may be met. Applied research includes investigations oriented to discovering new scientific knowledge that has specific commercial objectives with respect to products, processes, or services.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="https://www.irs.gov/pub/irs-tege/eotopico86.pdf" target="_blank" class="btn-get-started">Learn More</a>
           </div>
         </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="assets/img/GiAlly标.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
