@@ -59,7 +59,7 @@
       max-width: 800px;
     }
 
-    /* Purpose section card styling with gray-green tone, dynamic height, and spacing */
+    /* Purpose section card styling with gray-green tone, equal height, and grid layout spacing */
     .purpose-card {
       background: #edf6f4;
       border: 1px solid #d1e7e2;
@@ -68,8 +68,7 @@
       margin-top: 20px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       text-align: left;
-      max-width: 800px;
-      min-height: 340px;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -143,22 +142,37 @@
           </div>
         </div>
         
+        <!-- 2x2 Grid Layout for Purpose Cards -->
         <div class="row justify-content-center">
           <div class="col-lg-10">
-            <!-- Stacked Purpose Cards -->
-            <div class="purpose-card">
-              <h3>Charitable Purpose</h3>
-              <p>To lessen the burdens of government, advance education and science, and promote social welfare by engaging in activities that exclusively support exempt purposes under section 501(c)(3).</p>
-            </div>
-
-            <div class="purpose-card">
-              <h3>Educational Purpose</h3>
-              <p>To conduct public forums, lectures, panels, and classes, and to distribute informational materials designed to enhance community understanding of technology, science, and social welfare initiatives.</p>
-            </div>
-
-            <div class="purpose-card">
-              <h3>Scientific Purpose</h3>
-              <p>To conduct and support scientific research and development, publishing findings openly for the public benefit to advance knowledge in computer science, green energy, and sustainable infrastructure.</p>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="purpose-card">
+                  <h3>Charitable Purpose</h3>
+                  <p>To lessen the burdens of government, advance education and science, and promote social welfare by engaging in activities that exclusively support exempt purposes under section 501(c)(3).</p>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="purpose-card">
+                  <h3>Educational Purpose</h3>
+                  <p>To conduct public forums, lectures, panels, and classes, and to distribute informational materials designed to enhance community understanding of technology, science, and social welfare initiatives.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="purpose-card">
+                  <h3>Scientific Purpose</h3>
+                  <p>To conduct and support scientific research and development, publishing findings openly for the public benefit to advance knowledge in computer science, green energy, and sustainable infrastructure.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="purpose-card">
+                  <h3>Additional Purpose</h3>
+                  <p>To engage in any other lawful activities permitted under Section 501(c)(3) of the Internal Revenue Code in furtherance of GiAlly Inc.'s tax-exempt mission and community goals.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
