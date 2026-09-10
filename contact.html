@@ -142,6 +142,11 @@
       background-color: #0f766e !important;
     }
 
+    /* FORCE topbar container content strictly to the left to match About page perfectly */
+    #topbar .container-fluid {
+      justify-content: flex-start !important;
+    }
+
     /* Footer height and layout strictly matching the standard Index page */
     #footer {
       padding: 60px 0 30px 0 !important;
@@ -151,9 +156,9 @@
 </head>
 <body>
 
-  <!-- ======= Top Bar (Identical to About Page) ======= -->
+  <!-- ======= Top Bar (Forced to upper left-hand side) ======= -->
   <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex justify-content-center justify-content-md-start">
+    <div class="container-fluid container-xl d-flex">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:admin@gially.org">admin@gially.org</a></i>
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 (646) 203-2776</span></i>
