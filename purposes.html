@@ -12,16 +12,25 @@
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
-    /* Standard background matching the standard pages */
-    body, #hero {
+    /* Full height setup to guarantee footer touches the bottom without white gaps */
+    html, body {
+      height: 100%;
+      margin: 0;
       background-color: #ffffff !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #main {
+      flex: 1;
     }
 
     #hero {
+      background-color: #ffffff !important;
       padding: 60px 0 80px 0 !important;
     }
     
-    /* Heading style with orange underline matching the header accent */
+    /* Heading style with left-aligned orange underline */
     #hero h2 {
       color: #0f766e !important;
       font-weight: 700;
@@ -34,19 +43,20 @@
     #hero h2::after {
       content: '';
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      transform: none;
       bottom: 0;
       width: 60px;
       height: 3px;
       background-color: #f97316 !important;
     }
     
-    /* Subtitle styling */
+    /* Subtitle styling left-aligned */
     #hero p.subtitle {
       color: #334155 !important;
       font-size: 1.05rem;
       margin-bottom: 40px;
+      max-width: 800px;
     }
 
     /* Card styling for the three purposes blocks */
@@ -82,6 +92,7 @@
     /* Footer height and layout strictly matching the standard Index page */
     #footer {
       padding: 60px 0 30px 0 !important;
+      margin-top: auto;
     }
   </style>
 </head>
@@ -115,34 +126,45 @@
     </div>
   </header>
 
-  <!-- ======= Hero Section Layout ======= -->
-  <section id="hero" class="hero">
-    <div class="container text-center position-relative">
-      <h2>Purposes</h2>
-      <p class="subtitle">Organized and operated for scientific, educational and charitable purposes.</p>
-      
-      <div class="row gy-4 justify-content-center mt-2">
-        <div class="col-lg-4 col-md-6">
-          <div class="purpose-card">
-            <h3>Scientific (50%)</h3>
-            <p>Offers supervision/training in the scientific education of college or university students. Obtains scientific information published in a treatise, thesis, trade publication, or in any other form available to the interested public.</p>
+  <!-- ======= Main Content Area ======= -->
+  <main id="main">
+    <!-- ======= Hero Section Layout ======= -->
+    <section id="hero" class="hero">
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-start">
+            <h2>Purposes</h2>
+            <p class="subtitle">Organized and operated for scientific, educational and charitable purposes.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="purpose-card">
-            <h3>Educational (25%)</h3>
-            <p>We train people in the specific skills they will need to obtain employment in a particular industry or which provide work experience for youth or others who have no employment history.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="purpose-card">
-            <h3>Charitable (25%)</h3>
-            <p>We are an organization concerned with civil society, philanthropy, and the nonprofit sector who seek to promote the practice of charitable giving and voluntarism through a variety of strategies including advocacy, disclosure, information exchange, and research.</p>
+        
+        <div class="row gy-4 justify-content-center mt-2">
+          <div class="col-lg-10">
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6">
+                <div class="purpose-card">
+                  <h3>Scientific (50%)</h3>
+                  <p>Offers supervision/training in the scientific education of college or university students. Obtains scientific information published in a treatise, thesis, trade publication, or in any other form available to the interested public.</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="purpose-card">
+                  <h3>Educational (25%)</h3>
+                  <p>We train people in the specific skills they will need to obtain employment in a particular industry or which provide work experience for youth or others who have no employment history.</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="purpose-card">
+                  <h3>Charitable (25%)</h3>
+                  <p>We are an organization concerned with civil society, philanthropy, and the nonprofit sector who seek to promote the practice of charitable giving and voluntarism through a variety of strategies including advocacy, disclosure, information exchange, and research.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
