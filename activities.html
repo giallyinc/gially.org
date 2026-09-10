@@ -59,7 +59,7 @@
       max-width: 800px;
     }
 
-    /* Activity section card styling with off-white background, triple vertical padding, and doubled horizontal padding */
+    /* Activity section card styling with flexbox to maintain uniform height and dynamically adapt vertical spacing */
     .activity-card {
       background: #fcfcfc;
       border: 1px solid #e5e5e5;
@@ -69,6 +69,10 @@
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       text-align: left;
       max-width: 800px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .activity-card h3 {
@@ -85,7 +89,7 @@
       margin-bottom: 0;
     }
 
-    /* Carousel inner styling to prevent height shifting between items */
+    /* Carousel inner styling */
     .carousel-item {
       height: 100%;
     }
