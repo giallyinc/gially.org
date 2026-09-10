@@ -59,12 +59,12 @@
       max-width: 800px;
     }
 
-    /* Activity section card styling with 15% gray background */
+    /* Activity section card styling with 20% gray background (#cccccc) and doubled padding for consistent height */
     .activity-card {
-      background: #d8d8d8;
-      border: 1px solid #cbd5e1;
+      background: #cccccc;
+      border: 1px solid #b1b1b1;
       border-radius: 8px;
-      padding: 30px;
+      padding: 60px 30px;
       margin-top: 20px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       text-align: left;
@@ -83,6 +83,11 @@
       font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 0;
+    }
+
+    /* Carousel inner styling to prevent height shifting between items */
+    .carousel-item {
+      height: 100%;
     }
 
     /* Carousel dots styling */
