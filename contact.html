@@ -130,7 +130,7 @@
       padding: 12px 30px;
       font-weight: 600;
       border-radius: 6px;
-      transition: background-color 0.2s ease;
+      transition: background-color: 0.2s ease;
     }
 
     .contact-form button[type="submit"]:hover {
@@ -142,6 +142,14 @@
       background-color: #0f766e !important;
     }
 
+    /* Make sure navbar links align properly to match About page */
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
     /* Footer height and layout strictly matching the standard Index page */
     #footer {
       padding: 60px 0 30px 0 !important;
@@ -151,7 +159,7 @@
 </head>
 <body>
 
-  <!-- ======= Top Bar (Identical to About Page) ======= -->
+  <!-- ======= Top Bar ======= -->
   <section id="topbar" class="topbar d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -161,7 +169,7 @@
     </div>
   </section>
 
-  <!-- ======= Header (Identical structure and classes to About Page) ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
