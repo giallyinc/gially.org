@@ -143,7 +143,7 @@
 </head>
 <body>
 
-  <!-- ======= Top Bar (Exactly matching About page) ======= -->
+  <!-- ======= Top Bar ======= -->
   <section id="topbar" class="topbar d-flex align-items-center">
     <div class="container-fluid container-xl d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -153,7 +153,7 @@
     </div>
   </section>
 
-  <!-- ======= Header (Exactly matching About page) ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
@@ -210,7 +210,15 @@
 
             <!-- Contact Form Card -->
             <div class="contact-card mt-4">
-              <form action="mailto:admin@gially.org" method="POST" enctype="text/plain" class="contact-form">
+              <!-- Secure form action configured to send directly to your email safely -->
+              <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                
+                <!-- Replace the value below with your free access key from web3forms.com (Takes 10 seconds to generate for admin@gially.org) -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                
+                <!-- Optional: redirects user back to contact page with a success message or custom page -->
+                <input type="hidden" name="subject" value="New Message from GiAlly Website Contact Form">
+
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -221,7 +229,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    <input type="text" class="form-control" name="custom_subject" id="custom_subject" placeholder="Subject" required>
                   </div>
                 </div>
                 <div class="form-group mt-3">
