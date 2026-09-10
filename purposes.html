@@ -55,19 +55,20 @@
     #hero p.subtitle {
       color: #334155 !important;
       font-size: 1.05rem;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       max-width: 800px;
     }
 
-    /* Card styling for the three purposes blocks */
+    /* Purpose section card styling with the gray-green tone and double vertical/horizontal padding */
     .purpose-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: #edf6f4;
+      border: 1px solid #d1e7e2;
       border-radius: 8px;
-      padding: 30px;
-      height: 100%;
+      padding: 180px 120px;
+      margin-top: 20px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       text-align: left;
+      max-width: 800px;
     }
 
     .purpose-card h3 {
@@ -82,6 +83,33 @@
       font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 0;
+    }
+
+    /* Carousel inner styling to prevent height shifting between items */
+    .carousel-item {
+      height: 100%;
+    }
+
+    /* Carousel dots styling aligned to the left */
+    .carousel-indicators {
+      position: relative;
+      margin-top: 25px;
+      margin-bottom: 0;
+      margin-right: auto;
+      margin-left: 0;
+      justify-content: flex-start;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: #cbd5e1;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+    }
+
+    .carousel-indicators .active {
+      background-color: #0f766e;
     }
 
     /* Header, topbar, and footer unified in green */
@@ -134,30 +162,43 @@
         <div class="row justify-content-center">
           <div class="col-lg-10 text-start">
             <h2>Purposes</h2>
-            <p class="subtitle">Organized and operated for scientific, educational and charitable purposes.</p>
+            <p class="subtitle">GiAlly Inc. is organized exclusively for charitable, educational, and scientific purposes under Section 501(c)(3) of the Internal Revenue Code.</p>
           </div>
         </div>
         
-        <div class="row gy-4 justify-content-center mt-2">
+        <div class="row justify-content-center">
           <div class="col-lg-10">
-            <div class="row gy-4">
-              <div class="col-lg-4 col-md-6">
-                <div class="purpose-card">
-                  <h3>Scientific (50%)</h3>
-                  <p>Offers supervision/training in the scientific education of college or university students. Obtains scientific information published in a treatise, thesis, trade publication, or in any other form available to the interested public.</p>
+            <!-- Carousel Container -->
+            <div id="purposeCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="purpose-card">
+                    <h3>Charitable Purpose</h3>
+                    <p>To lessen the burdens of government, advance education and science, and promote social welfare by engaging in activities that exclusively support exempt purposes under section 501(c)(3).</p>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="purpose-card">
+                    <h3>Educational Purpose</h3>
+                    <p>To conduct public forums, lectures, panels, and classes, and to distribute informational materials designed to enhance community understanding of technology, science, and social welfare initiatives.</p>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                  <div class="purpose-card">
+                    <h3>Scientific Purpose</h3>
+                    <p>To conduct and support scientific research and development, publishing findings openly for the public benefit to advance knowledge in computer science, green energy, and sustainable infrastructure.</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="purpose-card">
-                  <h3>Educational (25%)</h3>
-                  <p>We train people in the specific skills they will need to obtain employment in a particular industry or which provide work experience for youth or others who have no employment history.</p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="purpose-card">
-                  <h3>Charitable (25%)</h3>
-                  <p>We are an organization concerned with civil society, philanthropy, and the nonprofit sector who seek to promote the practice of charitable giving and voluntarism through a variety of strategies including advocacy, disclosure, information exchange, and research.</p>
-                </div>
+              
+              <!-- Carousel Indicators (Aligned Left) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#purposeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#purposeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#purposeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
             </div>
           </div>
