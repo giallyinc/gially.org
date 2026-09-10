@@ -5,14 +5,120 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Activities - GIALLY INC.</title>
   <link href="assets/img/GiAlly标.png" rel="icon">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    /* Full height setup to guarantee footer touches the bottom without white gaps */
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #ffffff !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #main {
+      flex: 1;
+    }
+
+    #hero {
+      background-color: #ffffff !important;
+      padding: 60px 0 80px 0 !important;
+    }
+    
+    /* Heading style with left-aligned orange underline */
+    #hero h2 {
+      color: #0f766e !important;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+
+    #hero h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transform: none;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background-color: #f97316 !important;
+    }
+    
+    /* Subtitle styling left-aligned */
+    #hero p.subtitle {
+      color: #334155 !important;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+      max-width: 800px;
+    }
+
+    /* Activity section card styling */
+    .activity-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 30px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      text-align: left;
+      max-width: 800px;
+    }
+
+    .activity-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f766e;
+      margin-bottom: 15px;
+    }
+
+    .activity-card p {
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Carousel dots styling */
+    .carousel-indicators {
+      position: relative;
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: #cbd5e1;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+    }
+
+    .carousel-indicators .active {
+      background-color: #0f766e;
+    }
+
+    /* Header, topbar, and footer unified in green */
+    #header, #topbar, #footer {
+      background-color: #0f766e !important;
+    }
+
+    /* Footer height and layout strictly matching the standard Index page */
+    #footer {
+      padding: 60px 0 30px 0 !important;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ======= Top Bar ======= -->
   <section id="topbar" class="topbar d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -21,6 +127,8 @@
       </div>
     </div>
   </section>
+
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center"><h1>GiAlly</h1></a>
@@ -38,62 +146,47 @@
     </div>
   </header>
 
+  <!-- ======= Main Content Area ======= -->
   <main id="main">
-    <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center">
-        <div class="container position-relative">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2>Activities</h2>
-              <p>GiAlly Inc. is qualified to conduct its activities in any other state, territory, dependency, or foreign country</p>
-            </div>
+    <!-- ======= Hero Section Layout ======= -->
+    <section id="hero" class="hero">
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-start">
+            <h2>Activities</h2>
+            <p class="subtitle">GiAlly Inc. is qualified to conduct its activities in any other state, territory, dependency, or foreign country.</p>
           </div>
         </div>
-      </div>
-    </div>
-    <section id="activities" class="activities sections-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>U41 - Computer Science (Scientific)</h3>
-                  <p>Organizations that conduct research in the area of science that addresses the study of data and information storage and processing systems including hardware, software, basic design principles, user requirements analysis and related economic and policy issues.</p>
+        
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Carousel Container -->
+            <div id="activityCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="activity-card">
+                    <h3>Fiscal Sponsorship</h3>
+                    <p>Distribute funds to nonexempt organizations, provided GiAlly Inc. retains control and discretion over use of the funds for its own section 501(c)(3) purposes.</p>
+                  </div>
                 </div>
+                <!-- Additional carousel items can be added here -->
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>Q20 - Promotion of International Understanding (Educational)</h3>
-                  <p>Promote international understanding through activities, such as events, forums, trainings, and exchanges, which enable people to develop an appreciation for other societies, their traditions and culture.</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>T50 - Philanthropy, Charity & Voluntarism Promotion (Charitable)</h3>
-                  <p>Promote the practice of charitable giving and voluntarism through a variety of strategies including advocacy, disclosure, information exchange, and research.</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>Fiscal Sponsorship</h3>
-                  <p>Distribute funds to nonexempt organizations, provided GiAlly Inc. retains control and discretion over use of the funds for its own section 501(c)(3) purposes.</p>
-                </div>
+              
+              <!-- Carousel Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="container">
       <div class="row gy-4">
@@ -107,14 +200,16 @@
         </div>
       </div>
     </div>
+
     <div class="container mt-4">
-      <div class="copyright">&copy; Copyright <strong><span>GiAlly</span></strong>. All Rights Reserved</div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>GiAlly</span></strong>. All Rights Reserved
+      </div>
     </div>
   </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
