@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Thank You - GIALLY INC.</title>
+  <title>Contact - GIALLY INC.</title>
   <link href="assets/img/GiAlly标.png" rel="icon">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,62 +22,113 @@
 
     #main {
       flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     #hero {
       background-color: #ffffff !important;
-      padding: 40px 0 60px 0 !important;
-      width: 100%;
+      padding: 60px 0 80px 0 !important;
     }
-
-    .thank-you-card {
-      background: #edf6f4;
-      border: 1px solid #d1e7e2;
-      border-radius: 8px;
-      padding: 50px 40px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .success-icon {
-      font-size: 3.5rem;
-      color: #0f766e;
-      margin-bottom: 20px;
-    }
-
-    .thank-you-card h2 {
+    
+    #hero h2 {
       color: #0f766e !important;
       font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
       margin-bottom: 15px;
     }
 
-    .thank-you-card p {
+    #hero h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transform: none;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background-color: #f97316 !important;
+    }
+    
+    #hero p.subtitle {
       color: #334155 !important;
       font-size: 1.05rem;
-      line-height: 1.6;
       margin-bottom: 30px;
+      max-width: 800px;
     }
 
-    .btn-home {
+    .contact-card {
+      background: #edf6f4;
+      border: 1px solid #d1e7e2;
+      border-radius: 8px;
+      padding: 50px 60px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      text-align: left;
+      max-width: 800px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f766e;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p, .contact-card address {
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .contact-card p:last-child, .contact-card address:last-child {
+      margin-bottom: 0;
+    }
+
+    .map-container {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    .contact-form .form-control {
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      padding: 12px 15px;
+      color: #334155;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+    }
+
+    .contact-form .form-control:focus {
+      border-color: #0f766e;
+      box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.15);
+    }
+
+    .contact-form textarea.form-control {
+      min-height: 150px;
+    }
+
+    .contact-form button[type="submit"] {
       background-color: #0f766e;
       color: #ffffff;
       border: none;
       padding: 12px 30px;
       font-weight: 600;
       border-radius: 6px;
-      text-decoration: none;
       transition: background-color 0.2s ease;
-      display: inline-block;
     }
 
-    .btn-home:hover {
+    .contact-form button[type="submit"]:hover {
       background-color: #0b5e57;
-      color: #ffffff;
     }
 
     #header, #topbar, #footer {
@@ -114,7 +165,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="purposes.html">Purposes</a></li>
           <li><a href="activities.html">Activities</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -125,14 +176,85 @@
   <!-- ======= Main Content Area ======= -->
   <main id="main">
     <section id="hero" class="hero">
-      <div class="container">
-        <div class="thank-you-card">
-          <div class="success-icon">
-            <i class="bi bi-check-circle-fill"></i>
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-start">
+            <h2>Contact</h2>
+            <p class="subtitle">Mission of GiAlly Inc. is to help in the scientific education of college or university students. Contact information is down below.</p>
           </div>
-          <h2>Thank You!</h2>
-          <p>Your message has been successfully sent. We appreciate you reaching out and will review your submission and get back to you soon.</p>
-          <a href="index.html" class="btn-home">Return to Home</a>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Contact Details & Map Card -->
+            <div class="contact-card">
+              <h3><i class="bi bi-geo-alt-fill me-2"></i>Location:</h3>
+              <address>
+                447 Broadway 2nd Floor #1200<br>
+                New York, NY 10013-2562
+              </address>
+
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.4735100067645!2d-74.00196882347954!3d40.71881907138766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a223f669e77%3A0xb328328114fbb3a4!2s447%20Broadway%2C%20New%20York%2C%20NY%2010013!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <h3><i class="bi bi-envelope-fill me-2"></i>Email:</h3>
+              <p><a href="mailto:admin@gially.org">admin@gially.org</a></p>
+
+              <h3><i class="bi bi-telephone-fill me-2"></i>Call:</h3>
+              <p>+1 (646) 203-2776</p>
+
+              <h3><i class="bi bi-clock-fill me-2"></i>Open Hours:</h3>
+              <p>Monday-Friday: 11AM - 4PM</p>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="contact-card mt-4">
+              <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                
+                <!-- Your Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="ac65d7e9-50f4-4fb0-ba0e-4a021933e7cb">
+                
+                <!-- Redirects to your thank you page after submission -->
+                <input type="hidden" name="redirect" value="https://www.gially.org/thank-you.html">
+                
+                <input type="hidden" name="subject" value="New Message from GiAlly Website Contact Form">
+
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last Name" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 form-group mt-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 form-group mt-3">
+                    <input type="text" class="form-control" name="custom_subject" id="custom_subject" placeholder="Subject" required>
+                  </div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                
+                <div class="text-start mt-4">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
