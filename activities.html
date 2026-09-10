@@ -59,10 +59,10 @@
       max-width: 800px;
     }
 
-    /* Activity section card styling with 10% gray background (#e5e5e5) and triple padding for consistent height */
+    /* Activity section card styling with off-white background (#fcfcfc) and triple padding */
     .activity-card {
-      background: #e5e5e5;
-      border: 1px solid #cecece;
+      background: #fcfcfc;
+      border: 1px solid #e5e5e5;
       border-radius: 8px;
       padding: 90px 30px;
       margin-top: 20px;
@@ -90,11 +90,14 @@
       height: 100%;
     }
 
-    /* Carousel dots styling */
+    /* Carousel dots styling aligned to the left */
     .carousel-indicators {
       position: relative;
       margin-top: 25px;
       margin-bottom: 0;
+      margin-right: auto;
+      margin-left: 0;
+      justify-content: flex-start;
     }
 
     .carousel-indicators [data-bs-target] {
@@ -198,7 +201,7 @@
                 </div>
               </div>
               
-              <!-- Carousel Indicators -->
+              <!-- Carousel Indicators (Aligned Left) -->
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
