@@ -1,0 +1,1 @@
+Uploaded current affirmation letter
