@@ -12,7 +12,6 @@
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
-    /* Full height setup to guarantee footer touches the bottom without white gaps */
     html, body {
       height: 100%;
       margin: 0;
@@ -30,7 +29,6 @@
       padding: 60px 0 80px 0 !important;
     }
     
-    /* Heading style with left-aligned orange underline */
     #hero h2 {
       color: #0f766e !important;
       font-weight: 700;
@@ -51,77 +49,53 @@
       background-color: #f97316 !important;
     }
     
-    /* Subtitle styling left-aligned */
     #hero p.subtitle {
       color: #334155 !important;
       font-size: 1.05rem;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       max-width: 800px;
     }
 
-    /* Activity section card styling with a muted grayish-green tone */
-    .activity-card {
+    .activities-card {
       background: #edf6f4;
       border: 1px solid #d1e7e2;
       border-radius: 8px;
-      padding: 90px 60px;
-      margin-top: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      text-align: left;
-      max-width: 800px;
-      min-height: 340px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
-    .activity-card h3 {
-      font-size: 1.25rem;
+    .activities-card h3 {
+      font-size: 1.4rem;
       font-weight: 700;
       color: #0f766e;
       margin-bottom: 15px;
     }
 
-    .activity-card p {
+    .activities-card p {
       color: #334155;
-      font-size: 0.95rem;
+      font-size: 1rem;
       line-height: 1.6;
-      margin-bottom: 0;
     }
 
-    /* Carousel inner styling */
-    .carousel-item {
-      height: 100%;
+    /* Carousel Customizations */
+    .carousel {
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
     }
 
-    /* Carousel dots styling aligned to the left */
-    .carousel-indicators {
-      position: relative;
-      margin-top: 25px;
-      margin-bottom: 0;
-      margin-right: auto;
-      margin-left: 0;
-      justify-content: flex-start;
+    .carousel-inner img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
     }
 
-    .carousel-indicators [data-bs-target] {
-      background-color: #cbd5e1;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      border: none;
-    }
-
-    .carousel-indicators .active {
-      background-color: #0f766e;
-    }
-
-    /* Header, topbar, and footer unified in green */
     #header, #topbar, #footer {
       background-color: #0f766e !important;
     }
 
-    /* Footer height and layout strictly matching the standard Index page */
     #footer {
       padding: 60px 0 30px 0 !important;
       margin-top: auto;
@@ -132,7 +106,7 @@
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
+    <div class="container-fluid container-xl d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:admin@gially.org">admin@gially.org</a></i>
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 (646) 203-2776</span></i>
@@ -143,7 +117,9 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center"><h1>GiAlly</h1></a>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>GiAlly</h1>
+      </a>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -160,59 +136,82 @@
 
   <!-- ======= Main Content Area ======= -->
   <main id="main">
-    <!-- ======= Hero Section Layout ======= -->
     <section id="hero" class="hero">
       <div class="container position-relative">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-start">
             <h2>Activities</h2>
-            <p class="subtitle">GiAlly Inc. is qualified to conduct its activities in any other state, territory, dependency, or foreign country.</p>
+            <p class="subtitle">Explore our ongoing programs, workshops, and initiatives dedicated to advancing scientific education for college and university students.</p>
           </div>
         </div>
         
         <div class="row justify-content-center">
           <div class="col-lg-10">
-            <!-- Carousel Container -->
-            <div id="activityCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                  <div class="activity-card">
-                    <h3>Fiscal Sponsorship</h3>
-                    <p>Distribute funds to nonexempt organizations, provided GiAlly Inc. retains control and discretion over use of the funds for its own section 501(c)(3) purposes.</p>
+            
+            <!-- Activity Item 1 -->
+            <div class="activities-card">
+              <!-- Bootstrap Carousel with Auto-Slide Enabled -->
+              <div id="activityCarousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#activityCarousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#activityCarousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#activityCarousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/hero-img.png" class="d-block w-100" alt="Scientific Research Workshop">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/about.jpg" class="d-block w-100" alt="Student Collaboration">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/cta-bg.jpg" class="d-block w-100" alt="Applied Education Program">
                   </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                  <div class="activity-card">
-                    <h3>Q20 - Promotion of International Understanding (Educational)</h3>
-                    <p>Promote international understanding through activities, such as events, forums, trainings, and exchanges, which enable people to develop an appreciation for other societies, their traditions and culture.</p>
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                  <div class="activity-card">
-                    <h3>U41 - Computer Science (Scientific)</h3>
-                    <p>Organizations that conduct research in the area of science that addresses the study of data and information storage and processing systems including hardware, software, basic design principles, user requirements analysis and related economic and policy issues.</p>
-                  </div>
-                </div>
-                <!-- Slide 4 -->
-                <div class="carousel-item">
-                  <div class="activity-card">
-                    <h3>T50 - Philanthropy, Charity & Voluntarism Promotion (Charitable)</h3>
-                    <p>Promote the practice of charitable giving and voluntarism through a variety of strategies including advocacy, disclosure, information exchange, and research.</p>
-                  </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#activityCarousel1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#activityCarousel1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              
-              <!-- Carousel Indicators (Aligned Left) -->
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#activityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              </div>
+
+              <h3>Scientific Research Seminars & Workshops</h3>
+              <p>We organize interactive seminars and applied research workshops designed to bridge classroom theories with real-world scientific methodologies, empowering students to lead impactful projects.</p>
             </div>
+
+            <!-- Activity Item 2 -->
+            <div class="activities-card">
+              <!-- Bootstrap Carousel with Auto-Slide Enabled -->
+              <div id="activityCarousel2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#activityCarousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#activityCarousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/about.jpg" class="d-block w-100" alt="Mentorship Program">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/hero-img.png" class="d-block w-100" alt="Student Discussion">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#activityCarousel2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#activityCarousel2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <h3>Academic Mentorship & Guidance</h3>
+              <p>Our mentorship initiatives connect aspiring undergraduate and graduate researchers with experienced professionals, offering personalized guidance on scientific career paths and academic publishing.</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -224,9 +223,10 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center"><span>GiAlly</span>
-          </a>
-          <p>447 Broadway 2nd Floor #1200
+          <a href="index.html" class="logo d-flex align-items-center"><span>GiAlly</span></a>
+          <p><br>Email: admin@gially.org
+            <br>Phone: +1 (646) 203-2776
+            <br>447 Broadway 2nd Floor #1200
             <br>New York, New York 10013-2562
             <br>United States</p>
         </div>
@@ -235,7 +235,7 @@
 
     <div class="container mt-4">
       <div class="copyright">
-        &copy; COPYRIGHT <strong><span>GIALLY INC., A DELAWARE CHARITABLE NONSTOCK CORPORATION, EIN #: 92-3829314.</span></strong>. ALL RIGHTS RESERVED. <i><a href="https://www.gially.org/pdf/gially_inc_affermation_letter_4168C_08_21_2026.pdf" style="color: white; text-decoration: underline;">IRS AFFIRMATION LETTER 4168C</a></i>
+        &copy; Copyright <strong><span>GiAlly</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer>
